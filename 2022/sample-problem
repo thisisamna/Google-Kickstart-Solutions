@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int t, n, m, sumOfCandy, remainder;
+     
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        cin >> n >> m;
+        int* c = new int[n]();
+
+        for (int i = 0; i < n; i++)
+        {
+            cin >> c[i];
+        }
+        sumOfCandy = 0;
+        for (int i = 0; i < n; i++)
+            sumOfCandy += c[i];
+
+        remainder = sumOfCandy % m;
+        cout << "Case #" <<i<< ": " << remainder << endl;
+        delete[] c;
+    }
+   
+    return 0;
+}
